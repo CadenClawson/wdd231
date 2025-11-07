@@ -1,0 +1,60 @@
+@media (min-width: 768px) {
+
+    #menu {
+      display: none;
+    }
+  
+    nav {
+      display: block !important;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      border: none;
+    }
+  
+    nav ul li a {
+      padding: 1rem 2rem;
+    }
+  
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "title title"
+        "about photo"
+        "courses courses";
+      gap: 1rem;
+    }
+  
+    main h1 {
+      grid-area: title;
+    }
+  
+    section:nth-of-type(1) {
+      grid-area: about;
+    }
+  
+    section:nth-of-type(2) {
+      grid-area: courses;
+    }
+  
+    section:nth-of-type(3) {
+      grid-area: photo;
+    }
+  
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+    }
+  
+    footer {
+      font-size: 0.95rem;
+    }
+  }
+  

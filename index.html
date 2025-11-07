@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD231 Home Page for [Your Name]. Web and Computer Programming coursework.">
+  <meta name="author" content="[Your Name]">
+  <title>WDD231 | Home</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- JavaScript Files -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.svg" alt="Site logo" class="logo">
+      <span class="site-name">Caden Clawson</span>
+      <button id="menu" aria-label="Open navigation menu">&#9776;</button>
+    </div>
+    <nav id="navMenu" class="hidden">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/">Chamber</a></li>
+        <li><a href="final/">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About This Site</h2>
+      <p>Welcome to my WDD231 course homepage. Here you’ll find links to projects, exercises, and learning activities throughout the semester.</p>
+    </section>
+
+    <section>
+      <h2>Web and Computer Programming Certificate</h2>
+      <p>This section will display a dynamic list of required courses for the first certificate in the Software Development degree.</p>
+      <div class="course-buttons">
+        <button id="allBtn">All Courses</button>
+        <button id="wddBtn">WDD Courses</button>
+        <button id="cseBtn">CSE Courses</button>
+      </div>
+      <div id="courseContainer" class="course-grid"></div>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+
+    <section>
+      <h2>Contact & Social Links</h2>
+      <p>Connect with me through my professional and project profiles below.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/[yourgithubusername]" target="_blank">
+        <img src="images/github.svg" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/[yourlinkedinusername]" target="_blank">
+        <img src="images/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/twitter.svg" alt="Twitter">
+      </a>
+    </div>
+
+    <p>
+      &copy; <span id="currentyear"></span> Caden Clawson | Utah, USA
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
