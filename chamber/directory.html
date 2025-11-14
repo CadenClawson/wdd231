@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Directory of local businesses in West Valley City Chamber of Commerce. Connect, network, and grow your business community.">
+  <meta name="author" content="Your Full Name">
+
+  <title>Business Directory | West Valley City Chamber of Commerce</title>
+  
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta property="og:title" content="West Valley City Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore local businesses and connect with the West Valley City Chamber of Commerce community.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="West Valley City Chamber of Commerce Logo">
+      <h1>West Valley City Chamber of Commerce</h1>
+    </div>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+    <div class="view-toggle">
+      <button id="grid-view" class="active">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+    <div id="directory" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>📍 West Valley City Chamber of Commerce | 123 Main St, West Valley City, UT</p>
+    <p>Contact: info@westvalleychamber.org | (801) 555-1234</p>
+    <p>&copy; <span id="year"></span> | Caden Clawson | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/directory.js"></script>
+  <script src="scripts/lastmodified.js"></script>
+</body>
+</html>

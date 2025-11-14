@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Blue Sky Coffee",
+    "address": "145 Main St, West Valley City, UT",
+    "phone": "801-555-9876",
+    "website": "https://blueskycoffee.com",
+    "image": "https://picsum.photos/seed/blueskycoffee/400/250",
+    "logo": "https://placehold.co/100x100/4a90e2/ffffff?text=Blue+Sky",
+    "membership": 3,
+    "description": "Locally roasted coffee and pastries made fresh daily. A proud Gold Member of the Chamber."
+  },
+  {
+    "name": "West Valley Auto Repair",
+    "address": "2100 W 3500 S, West Valley City, UT",
+    "phone": "801-555-7788",
+    "website": "https://wvautorepair.com",
+    "image": "https://picsum.photos/seed/wvautorepair/400/250",
+    "logo": "https://placehold.co/100x100/f39c12/ffffff?text=WV+Auto",
+    "membership": 2,
+    "description": "Trusted local auto repair with certified mechanics. Family-owned since 1995."
+  },
+  {
+    "name": "Mountain View Realty Group",
+    "address": "4200 W Parkway Blvd, West Valley City, UT",
+    "phone": "801-555-2244",
+    "website": "https://mountainviewrealty.com",
+    "image": "https://picsum.photos/seed/mountainview/400/250",
+    "logo": "https://placehold.co/100x100/27ae60/ffffff?text=MV+Realty",
+    "membership": 3,
+    "description": "Helping West Valley residents buy and sell homes with confidence. Gold Chamber Sponsor."
+  },
+  {
+    "name": "GreenLeaf Landscaping & Design",
+    "address": "3565 S Redwood Rd, West Valley City, UT",
+    "phone": "801-555-9932",
+    "website": "https://greenleaflandscaping.com",
+    "image": "https://picsum.photos/seed/greenleaf/400/250",
+    "logo": "https://placehold.co/100x100/2ecc71/ffffff?text=GreenLeaf",
+    "membership": 1,
+    "description": "Residential and commercial landscaping services with sustainable design options."
+  },
+  {
+    "name": "The Local Table Restaurant",
+    "address": "2980 W 3500 S, West Valley City, UT",
+    "phone": "801-555-5567",
+    "website": "https://thelocaltable.com",
+    "image": "https://picsum.photos/seed/localtable/400/250",
+    "logo": "https://placehold.co/100x100/e74c3c/ffffff?text=Local+Table",
+    "membership": 2,
+    "description": "Farm-to-table dining showcasing fresh ingredients from Utah farmers and producers."
+  },
+  {
+    "name": "West Valley Fitness Center",
+    "address": "2555 W 3500 S, West Valley City, UT",
+    "phone": "801-555-8877",
+    "website": "https://wvfitnesscenter.com",
+    "image": "https://picsum.photos/seed/wvfitness/400/250",
+    "logo": "https://placehold.co/100x100/c0392b/ffffff?text=WV+Fitness",
+    "membership": 3,
+    "description": "Full-service gym offering personal training, group classes, and wellness programs."
+  },
+  {
+    "name": "TechWise Computer Solutions",
+    "address": "3900 W Parkway Blvd, West Valley City, UT",
+    "phone": "801-555-6633",
+    "website": "https://techwiseut.com",
+    "image": "https://picsum.photos/seed/techwise/400/250",
+    "logo": "https://placehold.co/100x100/9b59b6/ffffff?text=TechWise",
+    "membership": 1,
+    "description": "Computer repair, IT support, and cybersecurity services for small businesses."
+  },
+  {
+    "name": "Sunny Days Childcare Center",
+    "address": "2700 W 3300 S, West Valley City, UT",
+    "phone": "801-555-4321",
+    "website": "https://sunnydayskids.com",
+    "image": "https://picsum.photos/seed/sunnydays/400/250",
+    "logo": "https://placehold.co/100x100/f1c40f/000000?text=Sunny+Days",
+    "membership": 2,
+    "description": "Safe, fun, and educational childcare programs for infants through preschool age."
+  },
+  {
+    "name": "Pioneer Credit Union",
+    "address": "3330 W 3500 S, West Valley City, UT",
+    "phone": "801-555-1212",
+    "website": "https://pioneercredit.com",
+    "image": "https://picsum.photos/seed/pioneer/400/250",
+    "logo": "https://placehold.co/100x100/34495e/ffffff?text=Pioneer+CU",
+    "membership": 3,
+    "description": "Community-focused credit union offering personal and business banking solutions."
+  },
+  {
+    "name": "West Valley Community Arts Council",
+    "address": "1400 W 3500 S, West Valley City, UT",
+    "phone": "801-555-9900",
+    "website": "https://wvarts.org",
+    "image": "https://picsum.photos/seed/wvarts/400/250",
+    "logo": "https://placehold.co/100x100/1abc9c/ffffff?text=WV+Arts",
+    "membership": 1,
+    "description": "Non-profit promoting local artists and cultural events throughout the West Valley area."
+  }
+]
