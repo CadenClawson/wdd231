@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD231 Home Page for [Your Name]. Web and Computer Programming coursework.">
-  <meta name="author" content="[Your Name]">
-  <title>WDD231 | Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the West Valley City Chamber of Commerce. Connect, grow, and discover local businesses." />
+  <meta name="author" content="Caden Clawson" />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Home | West Valley City Chamber of Commerce</title>
 
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="icon" href="images/favicon.ico" />
 
-  <!-- JavaScript Files -->
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/course.js" defer></script>
+  <meta property="og:title" content="West Valley City Chamber of Commerce" />
+  <meta property="og:description" content="Supporting local businesses through community connections and development." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://yourgithubusername.github.io/wdd231/chamber/index.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
+
   <header>
-    <div class="header-content">
-      <img src="images/logo.svg" alt="Site logo" class="logo">
-      <span class="site-name">Caden Clawson</span>
-      <button id="menu" aria-label="Open navigation menu">&#9776;</button>
+    <div class="logo">
+      <img src="images/logo.png" alt="West Valley City Chamber Logo" />
+      <h1>West Valley City Chamber of Commerce</h1>
     </div>
-    <nav id="navMenu" class="hidden">
-      <ul>
+
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="nav-menu">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="chamber/">Chamber</a></li>
-        <li><a href="final/">Final</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Home</h1>
-
-    <section>
-      <h2>About This Site</h2>
-      <p>Welcome to my WDD231 course homepage. Here you’ll find links to projects, exercises, and learning activities throughout the semester.</p>
-    </section>
-
-    <section>
-      <h2>Web and Computer Programming Certificate</h2>
-      <p>This section will display a dynamic list of required courses for the first certificate in the Software Development degree.</p>
-      <div class="course-buttons">
-        <button id="allBtn">All Courses</button>
-        <button id="wddBtn">WDD Courses</button>
-        <button id="cseBtn">CSE Courses</button>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="West Valley City skyline" class="hero-img" />
+      <div class="hero-text">
+        <h2>Welcome to the West Valley City Chamber of Commerce</h2>
+        <p>Supporting local businesses. Building community. Strengthening the future.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
       </div>
-      <div id="courseContainer" class="course-grid"></div>
-      <p>Total Credits: <span id="totalCredits">0</span></p>
     </section>
 
-    <section>
-      <h2>Contact & Social Links</h2>
-      <p>Connect with me through my professional and project profiles below.</p>
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li><strong>Business Networking Breakfast</strong> – Feb 12 @ 9:00 AM</li>
+        <li><strong>Small Business Workshop</strong> – Feb 20 @ 6:00 PM</li>
+        <li><strong>Chamber Gala Night</strong> – March 5 @ 7:30 PM</li>
+      </ul>
     </section>
+
+    <section class="weather">
+      <h2>Local Weather</h2>
+
+      <div class="current-weather">
+        <p><strong>Temperature:</strong> <span id="current-temp"></span></p>
+        <p><strong>Conditions:</strong> <span id="current-desc"></span></p>
+      </div>
+
+      <div class="forecast">
+        <h3>3-Day Forecast</h3>
+        <ul id="forecast-list"></ul>
+      </div>
+    </section>
+
+    <section class="spotlight-section">
+        <h2>Business Spotlights</h2>
+        <div id="spotlight-container" class="spotlight-grid"></div>
+      </section>      
   </main>
 
   <footer>
-    <div class="social">
-      <a href="https://github.com/[yourgithubusername]" target="_blank">
-        <img src="images/github.svg" alt="GitHub">
-      </a>
-      <a href="https://linkedin.com/in/[yourlinkedinusername]" target="_blank">
-        <img src="images/linkedin.svg" alt="LinkedIn">
-      </a>
-      <a href="#" target="_blank">
-        <img src="images/twitter.svg" alt="Twitter">
-      </a>
-    </div>
-
-    <p>
-      &copy; <span id="currentyear"></span> Caden Clawson | Utah, USA
-    </p>
-    <p id="lastModified"></p>
+    <p>📍 West Valley City Chamber of Commerce | 123 Main St, West Valley City, UT</p>
+    <p>Contact: info@westvalleychamber.org | (801) 555-1234</p>
+    <p>&copy; <span id="year"></span> | Caden Clawson | WDD 231 | Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/spotlights.js"></script>
+  <script src="scripts/lastmodified.js"></script>
+  <script src="scripts/nav.js"></script>
+
 </body>
 </html>
