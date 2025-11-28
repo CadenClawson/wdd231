@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dream Garage — Site Plan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0b3d91;    /* deep blue — headings, nav, accents */
+      --accent:#ff7a18;     /* warm orange — buttons, highlights */
+      --bg:#f8f9fb;         /* light background */
+      --text:#222;
+      --muted:#555;
+      --container:1000px;
+      --gap:14px;
+      --card-radius:10px;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: Roboto, system-ui, -apple-system, "Segoe UI", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .wrap{
+      width:calc(100% - 48px);
+      max-width:var(--container);
+      background:white;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(11,61,145,0.08);
+      padding:28px;
+      box-sizing:border-box;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:8px;
+      background:linear-gradient(135deg,var(--primary),#1547b3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-family: Montserrat, sans-serif;
+      font-weight:700;
+      font-size:20px;
+      box-shadow: 0 4px 14px rgba(11,61,145,0.12);
+    }
+    h1{
+      margin:0;
+      font-family: Montserrat, sans-serif;
+      color:var(--primary);
+      font-size:20px;
+    }
+    p.lead{ margin:6px 0 18px; color:var(--muted); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+    }
+
+    section.card{
+      background:linear-gradient(180deg, #ffffff, #fbfdff);
+      border-radius:var(--card-radius);
+      padding:18px;
+      box-shadow:0 4px 12px rgba(11,61,145,0.04);
+    }
+    section.card h2{
+      margin-top:0;
+      font-family: Montserrat, sans-serif;
+      color:var(--primary);
+      font-size:16px;
+    }
+    ul.simple{ padding-left:20px; margin:6px 0 12px; color:var(--muted); }
+    .muted{ color:var(--muted); font-size:14px; }
+
+    .swatches{ display:flex; gap:12px; align-items:center; margin-top:8px; }
+    .swatch{ width:88px; border-radius:8px; padding:10px; color:white; font-weight:600; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+    .swatch.small{ width:72px; font-size:13px; padding:8px; }
+
+    .type-samples{ display:flex; flex-direction:column; gap:8px; margin-top:8px;}
+    .type-samples .h{ font-family: Montserrat, sans-serif; color:var(--primary); }
+    .type-samples .b{ font-family: Roboto, sans-serif; color:var(--muted); }
+
+    .wireframes{ display:flex; gap:16px; align-items:flex-start; margin-top:10px; }
+    .wf{
+      border:2px dashed rgba(11,61,145,0.12);
+      border-radius:8px;
+      background: linear-gradient(180deg, rgba(11,61,145,0.02), transparent);
+      padding:12px;
+      width:100%;
+      box-sizing:border-box;
+    }
+    .wf.mobile{ max-width:220px; }
+    .wf .box{ background:rgba(11,61,145,0.03); border-radius:6px; padding:8px; margin-bottom:8px; font-size:13px; color:var(--muted); }
+
+    aside .meta{ display:flex; flex-direction:column; gap:12px; }
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      background:var(--accent);
+      color:white;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      font-family: Montserrat, sans-serif;
+    }
+
+    footer{ margin-top:18px; font-size:13px; color:var(--muted); text-align:center;}
+    .checklist{ padding-left:18px; margin:8px 0;}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">DG</div>
+      <div>
+        <h1>Dream Garage — Site Plan</h1>
+        <p class="lead">Simple plan for a three-page car enthusiast website (home / catalog / favorites).</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card" aria-labelledby="site-name">
+          <h2 id="site-name">Site Name &amp; Reason</h2>
+          <p class="muted"><strong>Dream Garage</strong> — chosen because it communicates a curated collection of desirable cars (modern, classic, and performance) and fits the theme of a showcase site.</p>
+        </section>
+
+        <section class="card" aria-labelledby="purpose">
+          <h2 id="purpose">Site Purpose</h2>
+          <p class="muted">Provide a compact, browsable showcase of cars with specs, images, and the ability for visitors to mark favorites. The catalog will be generated from a local JSON file and include details and images for each car.</p>
+        </section>
+
+        <section class="card" aria-labelledby="scenarios">
+          <h2 id="scenarios">Visitor Scenarios</h2>
+          <ul class="simple">
+            <li>What are the specs (year, engine, horsepower, drivetrain) for this model?</li>
+            <li>How can I save a short list of favorite cars to review later?</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="colors">
+          <h2 id="colors">Color Scheme</h2>
+          <p class="muted">Two primary colors used across the site for a consistent brand:</p>
+          <div class="swatches">
+            <div class="swatch">
+              <div style="font-size:13px; opacity:0.95;">Primary</div>
+              <div style="font-size:14px; margin-top:6px;">#0b3d91</div>
+            </div>
+            <div class="swatch small" style="background:var(--accent);">
+              <div style="font-size:13px; opacity:0.95;">Accent</div>
+              <div style="font-size:14px; margin-top:6px;">#ff7a18</div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:10px;">Usage: <strong>Primary</strong> for headings, navigation, card accents; <strong>Accent</strong> for CTAs, buttons, badges.</p>
+        </section>
+
+        <section class="card" aria-labelledby="typography">
+          <h2 id="typography">Typography</h2>
+          <div class="type-samples">
+            <div class="h">Headings — Montserrat (weights 600/700)</div>
+            <div class="b">Body — Roboto (weights 300/400/500)</div>
+          </div>
+          <p class="muted" style="margin-top:8px;">Two web fonts keep the design clean: Montserrat for brand headings and Roboto for readable body text.</p>
+        </section>
+
+        <section class="card" aria-labelledby="wireframe">
+          <h2 id="wireframe">Wireframe — Home Page (mobile &amp; desktop)</h2>
+
+          <div class="wireframes" aria-hidden="false">
+            <div class="wf mobile" role="figure" aria-label="Mobile wireframe">
+              <div class="box" style="background:rgba(11,61,145,0.08); color:var(--primary); font-weight:600;">Header / Brand</div>
+              <div class="box">Hero image (short intro)</div>
+              <div class="box">Quick featured car (card)</div>
+              <div class="box">Catalog preview (list of car tiles)</div>
+              <div class="box">Footer / links</div>
+            </div>
+
+            <div class="wf" role="figure" aria-label="Desktop wireframe">
+              <div class="box" style="display:flex; justify-content:space-between; gap:8px;">
+                <span>Header / nav</span><span>Search / favorites icon</span>
+              </div>
+              <div class="box">Left: Hero / Featured car — Right: Quick stats or CTA</div>
+              <div class="box">Catalog grid (3 columns) — car cards with image + short specs</div>
+              <div class="box">Modal (detail) triggered from cards</div>
+              <div class="box">Footer with attributions &amp; video link</div>
+            </div>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">Notes: catalog page will display at least 15 cars. Each car card shows model, year, engine, horsepower, and thumbnail. Clicking a card opens an accessible modal with more details and an add/remove favorite button (persisted to localStorage).</p>
+        </section>
+
+        <section class="card" aria-labelledby="assets">
+          <h2 id="assets">Content &amp; Assets</h2>
+          <ul class="simple">
+            <li>Local JSON file (cars.json) with 15+ car objects and 6–8 properties each.</li>
+            <li>Optimized JPEG/WebP thumbnails (lazy-loaded) using intrinsic aspect ratios.</li>
+            <li>Attributions page in footer for image sources.</li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="testing">
+          <h2 id="testing">Testing &amp; Self-Check</h2>
+          <p class="muted">Planned checks before submission:</p>
+          <ul class="checklist">
+            <li>Validate HTML semantics (header, nav, main, footer).</li>
+            <li>Responsive check at 320px (mobile) and desktop widths — no horizontal scroll.</li>
+            <li>Fetch (local JSON) with <code>try...catch</code> and graceful error message UI.</li>
+            <li>Confirm localStorage favorites persist on reload.</li>
+            <li>Accessible modal: focus trap, keyboard close (Esc), and ARIA labels.</li>
+            <li>Page weight checks: images optimized and lazy-loaded to keep pages under 500kB.</li>
+            <li>Meta tags present: title, description, author, and basic Open Graph tags.</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <aside>
+        <section class="card">
+          <h2>Quick Project Info</h2>
+          <div class="meta">
+            <div class="muted"><strong>Pages:</strong> index.html, catalog.html, favorites.html</div>
+            <div class="muted"><strong>Scripts:</strong> modules / fetch, modal.js, storage.js, ui.js</div>
+            <div class="muted"><strong>Folder:</strong> /wdd231/final/dream-garage/</div>
+            <div><a class="btn" href="#">Start Project</a></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Form</h2>
+          <p class="muted">A simple "Suggest a Car" form will be included. The form submits to a separate action page (does not count toward 3 pages).</p>
+        </section>
+
+        <section class="card">
+          <h2>Deliverables</h2>
+          <ul class="simple">
+            <li>Three pages + form-action page</li>
+            <li>cars.json (local data)</li>
+            <li>Short 3–5 minute demo video link in footer</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="muted">Prepared for WDD231 — Dream Garage site plan. Uses primary color #0b3d91 and accent #ff7a18. Fonts: Montserrat &amp; Roboto.</div>
+    </footer>
+  </div>
+</body>
+</html>
