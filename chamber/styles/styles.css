@@ -311,3 +311,115 @@
   color: white;
   border-radius: 10px;
 }
+
+.join-layout {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 800px) {
+  .join-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #eef;
+  padding: 1rem;
+  border-radius: 8px;
+  animation: fadeLaunch 1s ease forwards;
+  opacity: 0;
+  animation-delay: var(--d);
+}
+
+@keyframes fadeLaunch {
+  to { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(15px); }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.confirmation {
+  background: #f5f7fa;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,.1);
+}
+
+.confirmation p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.confirmation strong {
+  color: #004b8d;
+}
+
+h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 2rem;      
+}
+
+.confirmation {
+  background: #f5f7fa;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  margin: 1.5rem auto;  
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0,0,0,.1);
+}
+
+.confirmation p {
+  margin: 0.75rem 0;
+  font-size: 1.05rem;
+}
+
+.confirmation strong {
+  color: #004b8d;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main .submit-btn {
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  align-self: center;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+}
