@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover | West Valley City</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="West Valley City Chamber Logo" />
+      <h1>West Valley City Chamber of Commerce</h1>
+    </div>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="directory.html">Business Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="discover-page">
+
+    <section class="intro">
+      <h2>Discover West Valley City</h2>
+      <p class="visit-message" id="visitMessage"></p>
+      <p>Explore local landmarks, parks, restaurants, and cultural spots that make our community unique.</p>
+    </section>
+
+    <section class="discover-grid" id="discoverGrid" aria-live="polite" role="region">
+    </section>
+
+  </main>
+
+  <footer>
+    <p>📍 West Valley City Chamber of Commerce | 123 Main St, West Valley City, UT</p>
+    <p>Contact: info@westvalleychamber.org | (801) 555-1234</p>
+    <p>&copy; <span id="year"></span> | Caden Clawson | WDD 231 | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script type="module" src="scripts/discover.js"></script>
+  <script src="scripts/lastmodified.js"></script>
+  <script src="scripts/nav.js"></script>
+</body>
+</html>

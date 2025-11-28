@@ -423,3 +423,120 @@ main .submit-btn {
   text-align: center;
   display: inline-block;
 }
+
+.discover-page {
+  padding: 1rem;
+}
+
+.intro {
+  max-width: 1000px;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a1"
+    "a2"
+    "a3"
+    "a4"
+    "a5"
+    "a6"
+    "a7"
+    "a8";
+  padding: 0 1rem;
+}
+
+.discover-card {
+  background: #fff;
+  padding: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.discover-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.discover-card figure {
+  margin: 0;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a1 a2"
+      "a3 a4"
+      "a5 a6"
+      "a7 a8";
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "a1 a2 a3"
+      "a4 a5 a6"
+      "a7 a8 a8";
+    gap: 1.5rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .discover-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+  }
+
+  .discover-card img {
+    transition: filter 220ms ease, transform 220ms ease;
+  }
+
+  .discover-card:hover img {
+    filter: saturate(1.05) contrast(1.03);
+    transform: scale(1.03);
+  }
+}
+
+.discover-card .learn-more {
+  margin-top: 0.6rem;
+  background: var(--primary-color, #004F9F);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.discover-card address {
+  font-style: normal;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.discover-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.visit-message {
+  font-weight: 600;
+  color: #1b75d0;
+}
