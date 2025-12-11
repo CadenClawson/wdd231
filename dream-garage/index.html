@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dream Garage — Home</title>
+  <meta name="description" content="Dream Garage — curated cars: specs, photos, and favorites." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dream Garage" />
+  <meta property="og:description" content="A curated showcase of classic, modern, and performance cars." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-github-pages-url" />
+  <meta property="og:image" content="images/og-cover.jpg" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html">Dream Garage</a></div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+        ☰
+      </button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Dream Garage</h1>
+      <p>Browse a curated collection of classic, modern, and performance cars. Save favorites, view specs, and explore.</p>
+      <p><a class="btn" href="catalog.html">Explore Catalog</a></p>
+    </section>
+
+    <section class="quick-features">
+      <article>
+        <h2>15+ Cars</h2>
+        <p>Data-driven catalog loaded from a local JSON file using Fetch and ES Modules.</p>
+      </article>
+
+      <article>
+        <h2>Favorites</h2>
+        <p>Mark cars you love. Favorites persist in your browser via localStorage.</p>
+      </article>
+
+      <article>
+        <h2>Accessible</h2>
+        <p>Keyboard-accessible modal, semantic HTML, and responsive layout for mobile and desktop.</p>
+      </article>
+    </section>
+
+    <section class="form-link">
+      <p>Have a car to suggest? <a href="form.html">Suggest a Car (form)</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Demo video link: 
+      <a href="#" id="video-link" rel="noopener">(Add your 3–5 min demo URL)</a>
+    </p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+  <script>
+    // Responsive hamburger toggle
+    const menuBtn = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    menuBtn.addEventListener("click", () => {
+      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", String(!expanded));
+      navList.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>

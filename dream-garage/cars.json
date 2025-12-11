@@ -1,0 +1,18 @@
+[
+    { "id": "c01", "make": "Nissan", "model": "GT-R", "year": 2022, "engine": "3.8L Twin-Turbo V6", "horsepower": 565, "drivetrain": "AWD", "img": "img/c01.png" },
+    { "id": "c02", "make": "Toyota", "model": "Supra", "year": 2021, "engine": "3.0L Turbo I6", "horsepower": 382, "drivetrain": "RWD", "img": "img/c02.png" },
+    { "id": "c03", "make": "Ford", "model": "Mustang GT", "year": 2020, "engine": "5.0L V8", "horsepower": 460, "drivetrain": "RWD", "img": "img/c03.png" },
+    { "id": "c04", "make": "Chevrolet", "model": "Corvette C8", "year": 2022, "engine": "6.2L V8", "horsepower": 495, "drivetrain": "RWD", "img": "img/c04.png" },
+    { "id": "c05", "make": "Lamborghini", "model": "Huracán EVO", "year": 2021, "engine": "5.2L V10", "horsepower": 631, "drivetrain": "AWD", "img": "img/c05.png" },
+    { "id": "c06", "make": "Ferrari", "model": "488 GTB", "year": 2019, "engine": "3.9L Twin-Turbo V8", "horsepower": 661, "drivetrain": "RWD", "img": "img/c06.png" },
+    { "id": "c07", "make": "Porsche", "model": "911 Carrera S", "year": 2020, "engine": "3.0L Twin-Turbo Flat-6", "horsepower": 443, "drivetrain": "RWD", "img": "img/c07.png" },
+    { "id": "c08", "make": "BMW", "model": "M4 Competition", "year": 2022, "engine": "3.0L Twin-Turbo I6", "horsepower": 503, "drivetrain": "RWD", "img": "img/c08.png" },
+    { "id": "c09", "make": "Audi", "model": "R8 V10", "year": 2020, "engine": "5.2L V10", "horsepower": 602, "drivetrain": "AWD", "img": "img/c09.png" },
+    { "id": "c10", "make": "Dodge", "model": "Challenger Hellcat", "year": 2021, "engine": "6.2L Supercharged V8", "horsepower": 717, "drivetrain": "RWD", "img": "img/c10.png" },
+    { "id": "c11", "make": "Mercedes-Benz", "model": "AMG GT", "year": 2020, "engine": "4.0L Twin-Turbo V8", "horsepower": 523, "drivetrain": "RWD", "img": "img/c11.png" },
+    { "id": "c12", "make": "Subaru", "model": "WRX STI", "year": 2019, "engine": "2.5L Turbo Flat-4", "horsepower": 310, "drivetrain": "AWD", "img": "img/c12.png" },
+    { "id": "c13", "make": "Honda", "model": "NSX", "year": 2020, "engine": "3.5L Twin-Turbo Hybrid V6", "horsepower": 573, "drivetrain": "AWD", "img": "img/c13.png" },
+    { "id": "c14", "make": "Mazda", "model": "RX-7 FD", "year": 2002, "engine": "1.3L Twin-Turbo Rotary", "horsepower": 276, "drivetrain": "RWD", "img": "img/c14.png" },
+    { "id": "c15", "make": "Tesla", "model": "Model S Plaid", "year": 2022, "engine": "Tri-Motor Electric", "horsepower": 1020, "drivetrain": "AWD", "img": "img/c15.png" }
+  ]
+  

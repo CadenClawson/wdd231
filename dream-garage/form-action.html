@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dream Garage — Form Submission</title>
+  <meta name="description" content="Display of submitted car suggestion form data." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dream Garage — Form Submission" />
+  <meta property="og:description" content="Submitted car suggestion form details." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="brand"><a href="index.html">Dream Garage</a></div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="form.html" aria-current="page">Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Form Submission Received</h1>
+    <p class="muted">Here is the data you submitted.</p>
+
+    <section class="card" aria-live="polite">
+      <h2>Submitted Data</h2>
+      <pre id="form-data">No form data found.</pre>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Demo video link:
+      <a href="#" id="video-link" rel="noopener">(Add demo URL)</a>
+    </p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const output = document.getElementById("form-data");
+
+    if ([...params].length > 0) {
+      const formatted = [...params]
+        .map(([key, val]) => `${key}: ${val}`)
+        .join("\n");
+
+      output.textContent = formatted;
+    }
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

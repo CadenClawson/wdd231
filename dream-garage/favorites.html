@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Dream Garage — Favorites</title>
+  <meta name="description" content="Your saved favorite cars — Dream Garage." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Open Graph (required for rubric) -->
+  <meta property="og:title" content="Dream Garage — Favorites" />
+  <meta property="og:description" content="View and manage your favorite cars in Dream Garage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-github-pages-url/favorites.html" />
+  <meta property="og:image" content="images/og-cover.jpg" />
+
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html">Dream Garage</a></div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <!-- Hamburger menu (was missing, required for mobile) -->
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="favorites.html" aria-current="page">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Your Favorites</h1>
+      <p class="muted">Cars you have favorited are listed below. Click the heart again to remove one.</p>
+    </section>
+
+    <section id="favorites" class="catalog" aria-live="polite">
+      <!-- Car cards will load here -->
+    </section>
+  </main>
+
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <p>Demo video link: 
+      <a href="#" id="video-link" rel="noopener">(Add demo URL)</a>
+    </p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+  <script type="module">
+    import { getCars } from './js/data.js';
+    import { renderCatalog, initCatalogUI } from './js/ui.js';
+    import { initModal } from './js/modal.js';
+    import { getFavorites } from './js/storage.js';
+
+    (async function init() {
+      initModal(document.getElementById('modal-root'));
+      initCatalogUI();
+
+      try {
+        const cars = await getCars();
+        const favIDs = getFavorites();
+
+        const favCars = cars.filter(car => favIDs.includes(car.id));
+
+        const container = document.getElementById('favorites');
+
+        if (favCars.length === 0) {
+          container.innerHTML = `<p class="muted">No favorites yet — add some from the catalog!</p>`;
+          return;
+        }
+
+        renderCatalog(favCars);
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('favorites').innerHTML =
+          `<p class="error">Could not load favorites.</p>`;
+      }
+    })();
+  </script>
+
+  <!-- Mobile hamburger JS (same as other pages) -->
+  <script>
+    const menuBtn = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

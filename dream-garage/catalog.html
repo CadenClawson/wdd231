@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Dream Garage — Catalog</title>
+  <meta name="description" content="Catalog of cars — browse specs, images, and details in Dream Garage." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dream Garage — Catalog" />
+  <meta property="og:description" content="Explore detailed specs and images of classic, modern, and performance cars." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-github-pages-url/catalog.html" />
+  <meta property="og:image" content="images/og-cover.jpg" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">Dream Garage</a>
+    </div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <!-- ADD HAMBURGER (was missing) -->
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" aria-current="page">Catalog</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Car Catalog</h1>
+      <p class="muted">Click a card to view more details. Tap the heart to save a car to your favorites.</p>
+    </section>
+
+    <section id="catalog" class="catalog" aria-live="polite">
+      <!-- JavaScript will render car cards here -->
+    </section>
+  </main>
+
+  <!-- Modal container -->
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <p>Demo video link:
+      <a href="#" id="video-link" rel="noopener">(Add your demo URL)</a>
+    </p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+  <script type="module">
+    import { getCars } from './js/data.js';
+    import { renderCatalog, initCatalogUI } from './js/ui.js';
+    import { initModal } from './js/modal.js';
+
+    (async function init() {
+      initModal(document.getElementById('modal-root'));
+      initCatalogUI();
+
+      try {
+        const cars = await getCars();
+
+        if (!Array.isArray(cars) || cars.length === 0) {
+          document.getElementById('catalog').innerHTML =
+            '<p class="error">No car data available.</p>';
+          return;
+        }
+
+        // Render 15+ cars (or all)
+        renderCatalog(cars);
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('catalog').innerHTML =
+          '<p class="error">Failed to load car data. Please check console.</p>';
+      }
+    })();
+  </script>
+
+  <!-- responsive hamburger JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
